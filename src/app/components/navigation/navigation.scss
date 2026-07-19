@@ -1,0 +1,37 @@
+.navigation {
+  margin-top: 3.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  color: var(--secondary);
+  a {
+    cursor: pointer;
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    color: var(--secondary);
+    text-decoration: none;
+
+    span {
+      width: 2rem;
+      height: 0.2px;
+      border: 0.2px solid currentColor; // Inherits color
+      transition: width 0.2s ease;
+    }
+
+    &:hover,
+    &.active {
+      color: var(--primary);
+
+      span {
+        width: 4rem;
+      }
+    }
+  }
+  @media screen and (max-width: 1100px) {
+    display: none;
+  }
+}

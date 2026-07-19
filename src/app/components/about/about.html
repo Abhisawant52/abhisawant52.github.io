@@ -1,0 +1,12 @@
+<!-- about.component.html -->
+<section id="about" class="info_container">
+  <h2 data-aos="fade-up" data-aos-duration="1000">{{ title }}</h2>
+  <p
+    data-aos="fade-up"
+    data-aos-duration="1000"
+    data-aos-delay="100"
+    *ngFor="let point of aboutPoints"
+  >
+    {{ point }}
+  </p>
+</section>

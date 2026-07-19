@@ -1,0 +1,18 @@
+<!-- social-links.component.html -->
+<article class="social_media_links" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+  <a
+    *ngFor="let link of socialLinks"
+    [href]="link.url"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <img
+      [src]="link.icon"
+      [alt]="link.alt"
+      [ngStyle]="{
+        width: link.size?.width || '24px',
+        height: link.size?.height || '24px'
+      }"
+    />
+  </a>
+</article>

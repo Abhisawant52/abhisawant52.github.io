@@ -1,0 +1,30 @@
+<section id="experience" class="info_container">
+  <h2 data-aos="fade-up" data-aos-duration="1000">{{ title }}</h2>
+
+  <!--  experience List  -->
+  <article *ngFor="let data of experiences; let i = index" data-aos="fade-up" data-aos-duration="1000" [attr.data-aos-delay]="i * 100">
+    <h3>
+      <a [href]="data.companyUrl" target="_blank">
+        {{ data.title }}
+        <div>
+          <span></span>{{ data.company }}
+          <img src="./svg/arrow-up-right-svgrepo-com.svg" alt="↗" />
+        </div>
+      </a>
+    </h3>
+    <h4>{{ data.duration }} <span></span> {{ data.experience }}</h4>
+    <ul>
+      <li *ngFor="let item of data.responsibilities">{{ item }}</li>
+    </ul>
+    <div class="language-tags">
+      <span *ngFor="let skill of data.skills">{{ skill }}</span>
+    </div>
+  </article>
+
+  <!-- Resume Link  -->
+  <h3 class="attach_links" data-aos="fade-up" data-aos-duration="1000">
+    <a href="./Abhishek_sawant_resume.pdf" target="_blank">
+      View Full Resume<img src="./svg/arrow-up-right-svgrepo-com.svg" alt=""
+    /></a>
+  </h3>
+</section>

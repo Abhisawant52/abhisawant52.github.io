@@ -1,0 +1,11 @@
+<!-- navigation.component.html -->
+<article class="navigation">
+  <a
+    *ngFor="let item of navItems"
+    [href]="item.href"
+    [class.active]="activeLink() === item.href"
+    (click)="setActive(item.href)"
+  >
+    <span></span>{{ item.label }}
+  </a>
+</article>

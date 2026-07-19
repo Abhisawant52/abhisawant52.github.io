@@ -1,0 +1,10 @@
+<section id="skill" class="info_container">
+  <h2 data-aos="fade-up" data-aos-duration="1000">{{ title }}</h2>
+  <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">{{ description }}</p>
+  <article>
+    <div *ngFor="let skill of skills; let i = index" data-aos="zoom-in" data-aos-duration="600" [attr.data-aos-delay]="i * 50">
+      <img [src]="skill.icon" [alt]="skill.name" />
+      <i> {{ skill.name }} </i>
+    </div>
+  </article>
+</section>

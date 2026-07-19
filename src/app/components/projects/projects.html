@@ -1,0 +1,28 @@
+<section id="projects" class="info_container">
+  <h2 data-aos="fade-up" data-aos-duration="1000">{{ title }}</h2>
+  <!-- Project list  -->
+  <article *ngFor="let project of projects; let i = index" data-aos="fade-up" data-aos-duration="1000" [attr.data-aos-delay]="i * 100">
+    <div class="img-container">
+      <img [src]="project.image" [alt]="project.title" />
+    </div>
+    <div class="info">
+      <h3>
+        <a [href]="project.link" target="_blank">
+          {{ project.title }}
+          <img src="./svg/arrow-up-right-svgrepo-com.svg" alt="↗" />
+        </a>
+      </h3>
+      <p>{{ project.description }}</p>
+      <div class="language-tags">
+        <span *ngFor="let tech of project.technologies">{{ tech }}</span>
+      </div>
+    </div>
+  </article>
+
+  <!-- Project Link  -->
+  <h3 class="attach_links" data-aos="fade-up" data-aos-duration="1000">
+    <a href="./Abhishek_sawant_resume.pdf" target="_blank">
+      View Full Projects<img src="./svg/arrow-up-right-svgrepo-com.svg" alt=""
+    /></a>
+  </h3>
+</section>
